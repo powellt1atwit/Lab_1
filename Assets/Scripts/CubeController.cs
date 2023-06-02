@@ -21,6 +21,9 @@ public class CubeController : MonoBehaviour
             // Destroy the cube
             Destroy(gameObject);
         }
+        if (collision.gameObject.tag == "NPC"){
+            GameController.npcScore--;
+        }
     }
 
     // Update is called once per frame
