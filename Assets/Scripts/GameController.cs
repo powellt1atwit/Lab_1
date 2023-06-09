@@ -6,7 +6,7 @@ public class GameController: MonoBehaviour
 
 {
     public static int score = 0;
-    public static int npcScore = 3;
+    static int npcScore = 0;
 
     void OnGUI()
     {
@@ -17,4 +17,7 @@ public class GameController: MonoBehaviour
         GUI.Label(new Rect(10, 40, 200, 50), "NPC Score: " + npcScore, scoreStyle);
     }
 
+    public void OnCubeGrabbed(){
+        npcScore--;
+    }
 }
